@@ -3,6 +3,8 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../constants/index";
+import { SectionWrapper } from "../hoc";
+
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
@@ -36,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
 const About=()=> {
   return (
     <>
-    <div className='container' style={{margin:"0rem 12rem"}}>
+    <div className='container' >
     <motion.div variants={textVariant()}>
     <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -61,4 +63,4 @@ const About=()=> {
   )
 }
 
-export default About
+export default SectionWrapper(About, "about");
