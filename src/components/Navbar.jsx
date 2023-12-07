@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../style";
 import { CgMenuRight, CgClose } from 'react-icons/cg';
 import { navLinks } from "../constants/index";
-import icon from "../assets/icon.ico"
+import icon from "../assets/company/i.png"
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -27,7 +27,8 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 `}
+        } w-full flex items-center fixed top-0 z-10`}
+        style={{backgroundColor:"rgb(27 76 149)"}}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -39,11 +40,7 @@ const Navbar = () => {
 
           }}
         >
-          <img src={icon} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Ashirwad &nbsp;
-            <span className='sm:block hidden'> |  Mastery</span>
-          </p>
+          <img src={icon} alt='logo' style={{height:"5rem",width:"15rem"}} />
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
@@ -69,14 +66,14 @@ const Navbar = () => {
       <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-12 text-white black-gradient absolute top-20 right-0 mx-2 my-5 min-w-[260px]  min-h-[60px] z-0 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title ? "text-white" : "text-black"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
