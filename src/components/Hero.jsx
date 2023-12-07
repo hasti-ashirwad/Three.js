@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-
+import Typewriter from "typewriter-effect";
 import { styles } from "../style";
-// import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
@@ -10,24 +10,34 @@ const Hero = () => {
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+          <div className='w-5 h-5 rounded-full bg-[#1F7FFA]' />
+          <div className='w-1 sm:h-80 h-80 violet-gradient' />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
-          </h1>
+        <div style={{marginTop:"2rem"}}>
+          <h3 className={`${styles.heroHeadText} text-white `} >
+          Let's Build Online Success <br/>Together With <span className='text-[#1F7FFA]'> Standard & Influence</span>
+          </h3>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+          <Typewriter
+              options={{
+                strings: ['We bring reality into your idea', 'We build invoative web and mobile app'],
+                autoStart: true,
+                loop: true,
+                delay: 100,
+                deleteSpeed: 20,
+                cursor: '|',
+                pauseFor: 1000,
+                wrapperClassName: 'typewriter-wrapper',
+                cursorClassName: 'typewriter-cursor',
+              }}
+            />
           </p>
         </div>
       </div>
-      {/* <ComputersCanvas /> */}
-
+    {/* <ComputersCanvas/> */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
+        <a>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
               animate={{
