@@ -1,143 +1,89 @@
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import map from "../assets/map.png";
-import { styles } from "../style";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-
-const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-  };
-
+import { FaArrowRight } from "react-icons/fa";
+import "../style/Contact.css";
+import map from "../assets/map.png"
+function Contact() {
   return (
-    <div
-      className={` flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-      style={{ backgroundImage: `url(${map})`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover", 
-      width:"105%",
-    }}
-      
-    >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-12 rounded-2xl '
-        style={{backgroundColor:" rgb(27 76 149) "}}
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText} style={{color:"#fff"}}>Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-
-          <button
-            type='submit'
-            className='bg-white py-3 px-12 rounded-xl outline-none w-fit text-black font-bold  shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <EarthCanvas />
-      </motion.div>
-    </div>
+    <>
+      <section id="contact" className="backgroundimg bg-cover bg-no-repeat" style={{ backgroundImage: `url(${map})` }}>
+        <div className="contact">
+          <div className="row justify-between m-3"></div>
+        </div>
+        <div>
+            <div className="col-md-2 contact-review text-white">
+              <h2 className="heading text-white">Contact Us</h2>
+              <p>Please fill in the form below.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="col-span-1">
+                  <input
+                    type="text"
+                    className="form-control w-full input-box"
+                    placeholder="Full Name"
+                    name="your_name"
+                  />
+                </div>
+                <div className="col-span-1">
+                  <input
+                    type="email"
+                    className="form-control w-full input-box"
+                    placeholder="Email Address"
+                    name="email"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
+                <div className="col-span-1">
+                  <input
+                    type="text"
+                    className="form-control w-full input-box"
+                    placeholder="Phone Number"
+                    name="phone"
+                  />
+                </div>
+                <div className="col-span-1 ml-2">
+                  <select
+                    className="form-select w-full input-box"
+                    aria-label="Default select example"
+                    name="intrested_in"
+                    style={{color:"#000"}}
+                  >
+                    <option selected>Intrested In</option>
+                    <option value="frontend">Web developer</option>
+                    <option value="mobileapp">Mobile app developer</option>
+                    <option value="backend">Backend developer</option>
+                    <option value="ui/ux">UI/UX designer</option>
+                  </select>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 mt-3">
+                <div className="col-span-1">
+                  <textarea
+                    className="form-control w-full input-box"
+                    placeholder="Message"
+                    name="messages"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="form-check mt-3">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  name="agreeTerms"
+                />
+                <label className="form-check-label" htmlFor="flexCheckDefault">
+                  I agree to the terms & conditions of Ashirwad infotech.
+                </label>
+                <div className="error"></div>
+              </div>
+              <button className="mt-4 button" >
+                Send your inquiry
+                <FaArrowRight className="ms-3" />
+              </button>
+            </div>
+        </div>
+      </section>
+    </>
   );
-};
+}
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

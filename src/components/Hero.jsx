@@ -2,8 +2,13 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
-
+import { Link as ScrollLink } from "react-scroll";
 const Hero = () => {
+
+  const goToBtn = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -16,7 +21,7 @@ const Hero = () => {
 
         <div style={{marginTop:"2rem"}}>
           <h3 className={`${styles.heroHeadText} text-white `} >
-          Let's Build Online Success <br/>Together With <span className='text-[#1F7FFA]'> Standard & Influence</span>
+          Let's Build Online Success <br/>Together With<span className='text-[#1F7FFA]'> Standard & Influence</span>
           </h3>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
           <Typewriter
@@ -37,8 +42,14 @@ const Hero = () => {
       </div>
     {/* <ComputersCanvas/> */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+        <ScrollLink   
+        to="career"
+            spy={true}
+            smooth={true}
+            offset={-750}
+            duration={500}
+            style={{cursor:"pointer"}}>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-bg-[#fff] flex justify-center items-start p-2'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -47,12 +58,12 @@ const Hero = () => {
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "loop",
+      
               }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
+              className='w-3 h-3 rounded-full bg-[#fff] mb-1'
             />
           </div>
-          
-        </a>
+          </ScrollLink>
       </div>
     </section>
   );

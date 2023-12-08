@@ -10,7 +10,7 @@ module.exports = {
         tertiary: " #F9F9F9",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "0px 2px 5px 1px #211e35",
       },
       screens: {
         xs: "450px",
