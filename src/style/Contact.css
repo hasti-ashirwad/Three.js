@@ -1,0 +1,149 @@
+#contact {
+    padding: 0.3rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  #contact .contact {
+    border-radius: 29px 29px 0px 0px;
+  }
+  
+  .backgroundimg {
+    height: 40%;
+     
+  }
+  .odd{
+    margin-left: 1rem;
+  }
+  .heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2.5rem 0.5rem;
+  }
+  
+  #contact .current-span {
+    background: var(--bgcolor-main);
+    -webkit-background-clip: text;
+    color: #fff;
+  }
+  
+  #contact .contact-review {
+    border-radius: 0.60831rem;
+    background: var(--gradiant, linear-gradient(131deg, #02176C 0%, #0076B6 100%));
+    box-shadow: 2.6545190811157227px -6.193877696990967px 9.733236312866211px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 3rem;
+    padding: 0 3rem;
+    margin-left: 5rem;
+    width: 38.4905rem;
+    height: 40.9375rem;
+    color: #fff;
+  }
+  
+  #contact p {
+    color: #E7E7E7;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: -6%;
+  }
+ 
+  .button{
+    border-radius: 3rem;
+    font-size: 0.96rem;
+    background: #fff;
+    padding: 0.8rem 3rem;
+    font-weight: 600;
+    color: #022B7C;
+    border: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  
+  }
+  
+  #contact .input-box {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1.12rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  #contact .error {
+    color: #ff0000;
+  }
+  
+  @media (min-width:920px) and (max-width:1280px) {
+    #contact .contact-heading {
+      margin-top: -4rem;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width:912px) {
+    #contact h6 {
+      font-size: 0.9rem;
+    }
+  
+    #contact .inquiry span {
+      font-size: 0.750rem;
+    }
+  
+    #contact .contact-heading {
+      margin-top: -2rem;
+    }
+  
+    #contact p {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+  
+    #contact .row {
+        flex-direction: column;
+      }
+    #contact button {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1rem 1rem;
+    }
+    #contact .input-box {
+        margin-bottom: 1rem;
+      }
+    
+  }
+  
+  @media screen and (max-width:765px) {
+    #contact .row {
+        flex-direction: column;
+      }
+    
+     .odd {
+        margin-top: 0.5rem;
+        margin-left: -0.3rem;
+      }
+    
+      .input-box {
+        margin-left: 0;
+      }
+    #contact .contact-heading {
+      padding-bottom: 3rem;
+    }
+  
+    #contact p {
+      font-size: 1.2rem;
+    }
+  
+    #contact button {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.9rem 0.9rem;
+      margin-bottom: 2rem;
+    }
+  
+    #contact .customers {
+      display: none;
+    }
+  
+    #contact .contact-review {
+      margin-left: 1rem;
+      width: 22.4905rem;
+      height: 49.9375rem;
+    }
+  }

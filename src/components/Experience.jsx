@@ -66,10 +66,10 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-    <a href="#SERVICES">
+    <div  id="services">
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText} text-center`} style={{ color: "rgb(27 76 149)" }}>
-        Service We Provide        </h2>
+        <h3 className={`${styles.sectionHeadText} text-center`} style={{ color: "rgb(27 76 149)" }}>
+        Service We Provide        </h3>
         <p className={`${styles.sectionSubText} text-center`}>
           The Practice Of Providing Existing And Potential Customers With Support To<br/>
           Enhance Their Satisfaction With The Company And Its Products Or Services.</p>
@@ -85,7 +85,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      </a>
+      </div>
     </>
   );
 };

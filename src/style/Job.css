@@ -1,0 +1,84 @@
+
+.job-image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.job_description{
+  height: 6rem;
+  text-transform: capitalize;
+  text-align: start;
+  padding: 0.5rem;
+}
+.current_job{
+  height: 5%;
+  width: 5%;
+  margin-top: 2rem;
+}
+.button-location {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-button {
+  border: 2px solid #02176ca2;
+   background: var(--bgcolor-main);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 0.3rem 1.2rem;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: 0.43px 0.86px 3.87px 0.43px rgba(0, 0, 0, 0.25);
+
+}
+
+.job-button:hover {
+  background: var(--bgcolor-main);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #current-job {
+    padding: 0rem 0rem 0 0;
+  }
+  .job_description{
+    height: 8rem;
+  }
+  #current-job .current-heading{
+    font-size: 1.9rem;
+  }
+  .current_job{
+    height: 8%;
+    width: 8%;
+    margin-top: 12rem;
+  }
+
+}
+@media (min-width:765px) and (max-width:912px) {
+  #current-job {
+    padding: 0rem 0rem 0 0;
+  }
+  .job_description{
+    height: 8rem;
+  }
+  .current_job{
+    height: 8%;
+    width: 8%;
+    margin-top: 12rem;
+  }
+}
+@media (min-width:920px) and (max-width:1280px){
+  .job_description{
+    height: 8.5rem;
+  }
+  .current_job{
+    height: 4%;
+    width: 4%;
+    margin-top: 9rem;
+  }
+ 
+}
