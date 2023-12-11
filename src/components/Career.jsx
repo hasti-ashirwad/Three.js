@@ -10,13 +10,11 @@ import training from "../components/images/flexible-working-hours.gif";
 import regular_outing from "../components/images/regular_outing.gif";
 import Mission from "../components/images/mission.gif";
 import main_image from "../components/images/main circle.png"
-
+import { styles } from "../style";
 function Career() {
   return (
     <>
-     <div className="career-heading">
-            <span className="career-span">Why Choose Us ?</span>
-          </div>
+      <h3 className={`${styles.sectionHeadText} text-center`} style={{ color: "#143058" }}>Why Chosse Us ?</h3>
       <div className="container mx-auto">
         <div
           id="career"
@@ -106,7 +104,7 @@ function Career() {
                 alt="Over Time 1"
               />      </div>
             <div className="square" style={{ left: "305px", top: "220px" }}>
-             <img src={main_image}/>
+              <img src={main_image} />
             </div>
 
             <div className="title" style={{ left: "143px", top: "564px" }}>
@@ -166,7 +164,7 @@ function Career() {
               Never, ever underestimate the <br />importance of having fun
             </div>
             <div className="description" style={{ left: "1px", top: "190px" }}>
-            Choose a job you love, and you will never have <br />importance of having fun
+              Choose a job you love, and you will never have <br />importance of having fun
             </div>
             <div className="description" style={{ left: "356px", top: "680.84px" }}>
               Never, ever underestimate the <br />importance of having fun
@@ -189,11 +187,11 @@ function Career() {
             <div className="description" style={{ left: "705px", top: "462.87px" }}>
               “The more that you read, the more things <br />you will know, the more that you learn.”
             </div>
-            
+
           </div>
 
         </div>
-      
+
         <div className="row row-cols-1 row-cols-md-3 g-2 ms-2 me-5 d-flex justify-content-center mt-5 pb-2">
           <div className="circle-container">
             <div className="outer-circle">

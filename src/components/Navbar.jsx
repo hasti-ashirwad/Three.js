@@ -20,7 +20,7 @@ const Navbar = ({ showApplyButton }) => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > 170) {
         setNavbarBackground(
-       "linear-gradient(131deg, #02176C 0%, #0076B6 100%)"
+       "linear-gradient(131deg, #143058 0%, #1A6590 100%)"
         );
       } else {
         setNavbarBackground("transparent");

@@ -126,7 +126,7 @@ const experiences = [
   {
     title: "Web Development",
     icon: starbucks,
-    iconBg: "linear-gradient(131deg, #02176C 0%, #0076B6 100%)",
+    iconBg: "linear-gradient(131deg, #143058 0%, #1A6590 100%)",
     image: web1,
     image1: web2,
     image2: web3,
@@ -145,7 +145,7 @@ const experiences = [
     image1: mobile2,
     image2: mobile3,
     image3: mobile4,
-    iconBg: "linear-gradient(131deg, #02176C 0%, #0076B6 100%)",
+    iconBg: "linear-gradient(131deg, #143058 0%, #1A6590 100%)",
     points: [
       "In today's digital world, a strong online presence is essential for businesses to succeed. ",
       "Your website serves as the virtual face of your business, representing your brand.",
@@ -160,7 +160,7 @@ const experiences = [
     image1: backend2,
     image2: backend3,
     image3: backend4,
-    iconBg: "linear-gradient(131deg, #02176C 0%, #0076B6 100%)",
+    iconBg: "linear-gradient(131deg, #143058 0%, #1A6590 100%)",
     date: "Jan 2022 - Jan 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -176,7 +176,7 @@ const experiences = [
     image1: ui2,
     image2: ui3,
     image3: backend1,
-    iconBg: "linear-gradient(131deg, #02176C 0%, #0076B6 100%)",
+    iconBg: "linear-gradient(131deg, #143058 0%, #1A6590 100%)",
     date: "Jan 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",

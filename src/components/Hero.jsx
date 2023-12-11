@@ -10,18 +10,18 @@ const Hero = () => {
   };
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full  mx-auto`} style={{height:"93vh"}}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#1F7FFA]' />
+          <div className='w-5 h-5 rounded-full bg-[#021927]' />
           <div className='w-1 sm:h-80 h-80 violet-gradient' />
         </div>
 
         <div style={{marginTop:"2rem"}}>
           <h3 className={`${styles.heroHeadText} text-white `} >
-          Let's Build Online Success <br/>Together With<span className='text-[#1F7FFA]'> Standard & Influence</span>
+          Let's Build Online Success <br/>Together With<span className='text-[#021927]'> Standard & Influence</span>
           </h3>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
           <Typewriter
@@ -46,7 +46,7 @@ const Hero = () => {
         to="career"
             spy={true}
             smooth={true}
-            offset={-750}
+            offset={-2550}
             duration={500}
             style={{cursor:"pointer"}}>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-bg-[#fff] flex justify-center items-start p-2'>

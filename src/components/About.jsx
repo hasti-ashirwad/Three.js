@@ -35,8 +35,9 @@ const ServiceCard = ({ index }) => (
                       <img className='job-image ' src={job}></img>                                                  
                       <div>
                         <Typography variant="h6" style={{
-                          textTransform: 'capitalize', fontWeight: "600",
-                          background: '-webkit-linear-gradient(102deg, #2081FE 9.82%, #0154CF 41.45%, #0154CF 93.22%)',
+                          textTransform: 'capitalize', 
+                          fontWeight: "600",
+                          background: '-webkit-linear-gradient(131deg, #143058 0%, #1A6590 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
                           marginLeft:"0.7rem"
@@ -88,7 +89,7 @@ const About = () => {
     <>
       <div>
         <motion.div variants={textVariant()}>
-          <h2 className={styles.sectionHeadText} style={{ color: "rgb(27 76 149)" }}>Current Job</h2>
+          <h2 className={styles.sectionHeadText} style={{ color: "#143058" }}>Current Job</h2>
         </motion.div>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}

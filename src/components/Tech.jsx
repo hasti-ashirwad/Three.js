@@ -11,7 +11,7 @@ const Tech = () => {
   return (
     <>
     <motion.div variants={textVariant()}>
-    <h2 className={`${styles.sectionHeadText} text-center`} style={{ color: "rgb(27 76 149)",marginBottom:"4rem" }}>
+    <h2 className={`${styles.sectionHeadText} text-center`} style={{ color: "#143058",marginTop:"-5rem",marginBottom:"4rem" }}>
          Our Expertise
         </h2>
         </motion.div>

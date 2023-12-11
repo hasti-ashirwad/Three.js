@@ -34,7 +34,7 @@
   }
  
   .footer-section {
-    background: var(--gradiant, linear-gradient(131deg, #02176C 0%, #0076B6 100%));
+    background: linear-gradient(131deg, #143058 0%, #1A6590 100%);
     margin-bottom: -5%;
   }
  

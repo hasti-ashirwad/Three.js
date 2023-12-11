@@ -7,18 +7,6 @@
     margin-bottom: -11.5rem;
 }
 
-.career-heading {
-    font-weight: 700;
-    font-size: 2.7rem;
-    text-align: center;
-}
-
-.career-span {
-    background: linear-gradient(131deg, #02176C 0%, #0076B6 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
 .career-circle {
     border: 2px solid red;
 }
@@ -131,7 +119,7 @@
     width: 82.10px;
     height: 82.10px;
     position: absolute;
-    background: #1493FF;
+    background: #1A6590;
     border-radius: 50%;
 }
 
@@ -139,7 +127,7 @@
     width: 82.10px;
     height: 82.10px;
     position: absolute;
-    background: linear-gradient(102deg, #02176C 9.82%, #0076B6 93.22%);
+    background: linear-gradient(131deg, #143058 0%, #1A6590 130%);
     border-radius: 50%;
 }
 
