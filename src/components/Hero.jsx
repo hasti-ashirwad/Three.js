@@ -4,23 +4,19 @@ import { styles } from "../style";
 import { Link as ScrollLink } from "react-scroll";
 const Hero = () => {
 
-  const goToBtn = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
-
   return (
-    <section id="#header" className={`relative w-full  mx-auto`} style={{height:"90vh"}}>
+    <section  className={`relative w-full  mx-auto`} style={{height:"90vh"}}>
       <div
-        className={`absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[150px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#021927]' />
+          <div className='w-5 h-5 rounded-full bg-[#091822]' />
           <div className='w-1 sm:h-80 h-80 violet-gradient' />
         </div>
 
         <div style={{marginTop:"2rem"}}>
           <h3 className={`${styles.heroHeadText} text-white `} >
-          Let's Build Online Success <br/>Together With<span className='text-[#021927]'> Standard & Influence</span>
+          Let's Build Online Success <br/>Together With<span className='text-[#091822]' style={{fontWeight:"600"}}> Standard & Influence</span>
           </h3>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
           <Typewriter
