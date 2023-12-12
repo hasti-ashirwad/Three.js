@@ -57,7 +57,7 @@ function Contact() {
               <div className="grid grid-cols-1 mt-3">
                 <div className="col-span-1">
                   <textarea
-                    className="form-control w-full input-box"
+                    className="form-control w-full "
                     placeholder="Message"
                     name="messages"
                     rows="3"
