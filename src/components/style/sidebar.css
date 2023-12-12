@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: black;
 }
 
 .sidebar .bg {
@@ -15,16 +14,20 @@
   left: 0;
   bottom: 0;
   width: 400px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   background: white;
   margin-left: -0.7rem;
-
+  transition: background 0.3s ease;
 }
 
-@media screen and (max-width: 767px) {
-  .sidebar .bg {
-    width: 200px;
-  }
+.sidebar.scrolling .bg {
+  background: linear-gradient(131deg, #01265a 0%, #1A6590 100%);
 }
+.sidebar.scrolling .links{
+ color: #fff;
+}
+
 
 .sidebar .bg .links {
   position: absolute;
@@ -35,17 +38,9 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-}
-
-.sidebar .bg .links a {
   font-size: 40px;
 }
 
-@media screen and (max-width: 767px) {
-  .sidebar .bg .links a {
-    font-size: 20px;
-  }
-}
 
 .sidebar button {
   z-index: 999;
@@ -59,4 +54,9 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .sidebar .bg {
+    width: 200px;
+  }
 }

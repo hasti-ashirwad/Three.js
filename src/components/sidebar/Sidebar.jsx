@@ -1,6 +1,6 @@
-import "../style/sidebar.css";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import "../style/sidebar.css";
 import Links from "./links/Links";
 import ToggleButton from "./toggleButton/ToggleButton";
 
@@ -22,15 +22,36 @@ const variants = {
     },
   },
 };
+
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    <motion.div
+      className={`sidebar ${scrolling ? "scrolling" : ""}`}
+      animate={open ? "open" : "closed"}
+    >
       <motion.div className="bg" variants={variants}>
         <Links />
       </motion.div>
-      <ToggleButton setOpen={setOpen} />
+      <ToggleButton setOpen={setOpen} scrolling={scrolling} />
     </motion.div>
   );
 };
