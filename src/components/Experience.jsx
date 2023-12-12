@@ -19,13 +19,17 @@ const ExperienceCard = ({ experience }) => {
           background: " linear-gradient(131deg, #143058 0%, #1A6590 100%)",
           color: "#fff",
         }}
-        contentArrowStyle={{ borderRight: "7px solid  #1F7FFA" }}
-        date={<div className=' flex' style={{ marginLeft: "auto" }}>
-          <image src={experiences.image} className='w-70 h-70 ' />
-          <image src={experiences.image1} className='w-70 h-70' />
-          <image src={experiences.image2} className='w-70 h-70 ' />
-          <image src={experiences.image3} className='w-70 h-70 ' />
-        </div>}
+        contentArrowStyle={{ borderRight: "7px solid  #1A6590" }}
+        
+        date={
+          <div className='flex' style={{ marginLeft: '2rem',height:"3.5rem",gap:"20px" }}>
+            <img src={experience.image} className='w-18 h-18' alt='experience-img' />
+            <img src={experience.image1} className='w-18 h-18' alt='experience-img1' />
+            <img src={experience.image2} className='w-18 h-18' alt='experience-img2' />
+            <img src={experience.image3} className='w-18 h-18' />
+          </div>
+        }
+        
 
         iconStyle={{ background: experience.iconBg }}
         icon={

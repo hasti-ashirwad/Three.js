@@ -140,7 +140,7 @@ const experiences = [
   },
   {
     title: "Mobile App Development",
-    icon: tesla,
+    icon:  shopify,
     image: mobile1,
     image1: mobile2,
     image2: mobile3,
@@ -155,7 +155,7 @@ const experiences = [
   },
   {
     title: "Backend Development",
-    icon: shopify,
+    icon:tesla ,
     image: backend1,
     image1: backend2,
     image2: backend3,
@@ -175,7 +175,6 @@ const experiences = [
     image: ui1,
     image1: ui2,
     image2: ui3,
-    image3: backend1,
     iconBg: "linear-gradient(131deg, #143058 0%, #1A6590 100%)",
     date: "Jan 2023 - Present",
     points: [
