@@ -89,7 +89,7 @@ const About = () => {
     <>
       <div>
         <motion.div variants={textVariant()}>
-          <h2 className={styles.sectionHeadText} style={{ color: "#143058" }}>Current Job</h2>
+          <h2 className={styles.sectionHeadText} style={{ color: "#143058" }}>Current Jobs</h2>
         </motion.div>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
