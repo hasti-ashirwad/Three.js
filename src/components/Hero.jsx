@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { styles } from "../style";
-import { ComputersCanvas } from "./canvas";
 import { Link as ScrollLink } from "react-scroll";
 const Hero = () => {
 
@@ -10,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={`relative w-full  mx-auto`} style={{height:"93vh"}}>
+    <section id="#header" className={`relative w-full  mx-auto`} style={{height:"90vh"}}>
       <div
         className={`absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -40,7 +39,6 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    {/* <ComputersCanvas/> */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <ScrollLink   
         to="career"
