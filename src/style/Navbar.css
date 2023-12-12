@@ -18,7 +18,9 @@
   font-size: 1.5rem;
   color: #fff;
 }
-
+.social:hover{
+  color: #fff;
+}
 .navbar-logo {
   display: block;
   margin-right: 50rem;
