@@ -66,59 +66,75 @@ const technologies = [
   {
     name: "t1",
     icon: web1,
+    title:"HTML"
   },
   {
     name: "t2",
     icon: web2,
+    title:"JAVA"
+
   },
   {
     name: "t3",
     icon: web3,
+    title:"NODE"
+
   },
   {
     name: "t4",
     icon: web4,
+    title:"JAVA"
   },
   {
     name: "t5",
     icon: mobile1,
+    title:"NODE"
   },
   {
     name: "t6",
     icon: mobile2,
+    title:"JAVA"
   },
 
   {
     name: "t8",
     icon: mobile4,
+    title:"NODE"
   },
   {
     name: "t9",
     icon: backend1,
+    title:"DOT"
   },
   {
     name: "t10",
     icon: backend2,
+    title:"NODE"
   },
   {
     name: "t11",
     icon: backend3,
+    title:"REACT"
   },
   {
     name: "t12",
     icon: backend4,
+    title:"NODE"
   },
   {
     name: "t13",
     icon: ui1,
+    title:"NODE"
   },
   {
     name: "t14",
     icon: ui2,
+    title:"NODE"
   },
   {
     name: "t15",
     icon: ui3,
+    title:"NODE"
   },
 ];
 
