@@ -6,8 +6,8 @@ import {
   OrbitControls,
   Preload,
   useTexture,
+  Html
 } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
@@ -16,8 +16,8 @@ const Ball = (props) => {
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <directionalLight position={[0, 1, 1.65]} />
+      <mesh castShadow receiveShadow scale={2.85}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color='#fff8eb'
@@ -32,12 +32,22 @@ const Ball = (props) => {
           map={decal}
           flatShading
         />
+          <Decal
+          position={[0, 0, -1]} 
+          rotation={[2 * Math.PI, 0, 6.25]}
+          scale={1}
+          map={decal}
+          flatShading
+        />
+        <p position={[0, 0, -1]}>{props.title}</p>
       </mesh>
     </Float>
   );
 };
 
-const BallCanvas = ({ icon }) => {
+
+
+const BallCanvas = ({ icon,title }) => {
   return (
     <Canvas
       frameloop='demand'
@@ -46,7 +56,7 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball imgUrl={icon} title={title} />
       </Suspense>
 
       <Preload all />

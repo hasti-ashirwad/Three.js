@@ -85,6 +85,7 @@ const ServiceCard = ({ index }) => (
   </Tilt>
 );
 const About = () => {
+  
   return (
     <>
       <div>
