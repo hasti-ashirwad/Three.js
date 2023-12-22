@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Cursor from "./components/cursor/Cursor";
 
 function App() {
+  // joburl = process.env.REACT_APP_JOB_URL
   return (
     <>
       <Cursor />
