@@ -6,7 +6,6 @@ import {
   OrbitControls,
   Preload,
   useTexture,
-  Html
 } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
@@ -39,7 +38,6 @@ const Ball = (props) => {
           map={decal}
           flatShading
         />
-        <p position={[0, 0, -1]}>{props.title}</p>
       </mesh>
     </Float>
   );
